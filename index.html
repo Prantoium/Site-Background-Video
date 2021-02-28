@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background video📹</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="preloader">
+      <img src="810.gif" alt="preloader" class="preloader__item" />
+    </div> 
+ 
+    <header>
+      <video class="video-container" autoplay loop>
+        <source src="production ID_3735544.mp4" type="video/mp4" />
+      </video>
+      <h1>Water is the driving force of all nature</h1>
+      <button class="switch-btn">
+        <span>
+          play
+        </span>
+        <span>
+          pause
+        </span>
+        <span class="switch"></span>
+      </button>
+    </header>
+<script>
+      const btnSwitch=document.querySelector(".switch-btn");
+      const video=document.querySelector(".video-container");
+      const preloader=document.querySelector(".preloader");
+      btnSwitch.addEventListener("click",()=>{
+            if(btnSwitch.classList.contains("slide")){
+                btnSwitch.classList.remove("slide");
+                video.play();
+            }
+            else{
+                btnSwitch.classList.add("slide");
+                video.pause();
+            }
+      });
+
+      window.addEventListener("load",()=>{
+        preloader.classList.add("hide-preloader")
+      });
+</script>
+ 
+</body>
+</html>
